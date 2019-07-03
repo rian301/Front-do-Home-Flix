@@ -1,0 +1,8 @@
+<div class="menu bg-dark" [class.menu-open]="menuAberto">
+  <a *ngFor="let menu of menus" class="nav-link zoom mt-2" [class.active]="isPageActive(menu.url)" [routerLink]="[menu.url]">
+    <i [class]="menu.icon"></i>
+    <div class="d-none d-lg-inline-flex">
+      <div class="nav-gradient ">&nbsp;{{menu.title}}</div>
+    </div>
+  </a>
+</div>

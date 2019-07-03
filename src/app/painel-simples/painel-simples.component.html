@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-lg-4" *ngFor="let card of cards, let i = index">
+      <div class="card m-3 bg-light box-shadow-card " style="max-width: 20rem;">
+        <img src="{{imagem}}" class="p-2" style="height: 16rem;">
+        <div class="card-body text-center" style="max-width: 100%;">
+          <p>Episódio {{i + 1}}</p>
+          <div class="dropdown-divider"></div>
+          <h5 class="card-title">{{titulo}}</h5>
+          <p class="card-text">{{infoFilme}}</p>
+          <a href="#" class="btn btn-dark btn-block" target="_blank">Assistir</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

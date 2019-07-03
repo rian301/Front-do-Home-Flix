@@ -1,0 +1,21 @@
+<!-- Card de vídeo -->
+<div class="container">
+	<div class="row">
+		<!-- <app-error-msg></app-error-msg> -->
+		<div class="col-md-6 col-lg-4 mt-5" *ngFor="let card of cards">
+			<div class="card m-3 bg-light box-shadow-card " style="max-width: 20rem;">
+				<img src="#" class="p-2" style="height: 16rem;">
+				<div class="card-body text-center" style="max-width: 100%;">
+					<!-- <p>{{video.episodio}}</p> -->
+					<div class="dropdown-divider"></div>
+					<h5 class="card-title">{{card.titulo}}</h5>
+					<p class="card-text">{{card.descricao}}</p>
+					<button  type="button"
+						class="btn btn-dark btn-block">Assistir</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- (click)="abrirVideo(card.link)" -->

@@ -1,0 +1,24 @@
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+    <app-video-abertura></app-video-abertura>
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <!-- <img src="" id="icon" alt="User Icon" /> -->
+      <h3>Home Flix</h3>
+    </div>
+
+    <!-- Login Form -->
+    <form>
+      <input [(ngModel)]="usuario.nome" type="text" id="usuario" name="nome" class="fadeIn second" placeholder="Usuário">
+      <input [(ngModel)]="usuario.senha" type="password" id="senha" name="senha" class="fadeIn third" placeholder="Senha">
+      <input type="submit" class="fadeIn fourth" value="Login" (click)="fazerLogin()">
+    </form>
+
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+      <a class="underlineHover" href="#">Esqueceu a Senha?</a>
+    </div>
+
+  </div>
+</div>
