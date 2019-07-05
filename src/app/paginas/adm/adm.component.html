@@ -1,0 +1,37 @@
+<app-error-msg></app-error-msg>
+<div class="container">
+	<div class="text-center p-5">
+		<button (click)="mostrarForm()" type="button" class="btn btn-success mx-4">Novo Filme</button>
+		<button type="button" class="btn btn-warning mx-4">Editar Filme</button>
+		<button type="button" class="btn btn-danger mx-4">Deletar Filme</button>
+	</div>
+	<div class="row">
+		<div class="card mx-auto" *ngIf="mostrarCard">
+			<div class="card-header text-center">
+				Filme
+			</div>
+			<form [formGroup]="filmeForm" (ngSubmit)="criar()">
+				<div class="card-body">
+					<label for="exampleInputEmail1">Título</label>
+					<input hidden formControlName="id">
+
+					<input type="email" class="form-control mb-2" placeholder="Nome do Filme" formControlName="titulo">
+
+					<label for="exampleInputEmail1">Link</label>
+
+					<input type="email" class="form-control mb-2" placeholder="Link do Filme" formControlName="link">
+
+					<div class="form-group">
+						<label for="exampleFormControlFile1">Imagem do Filme</label>
+						<input type="file" class="form-control-file" formControlName="imagem">
+						<label for="exampleFormControlTextarea1">Descrição</label>
+						<textarea class="form-control" rows="3" formControlName="descricao"></textarea>
+					</div>
+					<div class="text-center">
+						<button type="submit" class="btn btn-primary py-2">Gravar</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

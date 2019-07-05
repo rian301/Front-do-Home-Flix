@@ -6,6 +6,7 @@ import { LoginComponent } from './login/login.component';
 import { AuthGuard } from './services/AuthGuard';
 import { VideoReprodutorComponent } from './video/video-reprodutor/video-reprodutor.component';
 import { HimymComponent } from './paginas/series/himym/himym.component';
+import { ADMComponent } from './paginas/adm/adm.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'reprodutor/:linkFilme', component: VideoReprodutorComponent, canActivate: [AuthGuard] },
   { path: 'reprodutor', component: VideoReprodutorComponent, canActivate: [AuthGuard] },
   { path: 'painel-simples', component: PainelSimplesComponent, canActivate: [AuthGuard] },
+  { path: 'adm', component: ADMComponent, canActivate: [AuthGuard] },
   { path: '**', redirectTo: 'home'}
 ];
 

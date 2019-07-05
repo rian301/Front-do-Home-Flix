@@ -24,6 +24,7 @@ export class MenuLateralComponent implements OnInit {
     this.menus.push(new Menu('/himym', 'Séries', 'fa fa-film'));
     this.menus.push(new Menu('/', 'Animes', 'fa fa-film'));
     this.menus.push(new Menu('/painel-simples', 'Painel', 'fa fa-lock'));
+    this.menus.push(new Menu('/adm', 'ADM', 'fa fa-lock'));
     
 
 	}

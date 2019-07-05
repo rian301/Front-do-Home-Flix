@@ -10,7 +10,7 @@ import { PainelSimplesComponent } from './painel-simples/painel-simples.componen
 import { HomeComponent } from './paginas/home/home.component';
 import { LoginComponent } from './login/login.component';
 import { AuthService } from './login/auth.service';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SnackbarComponent } from './snackbar/snackbar.component';
 import { NotificationService } from './services/notification.service';
 import { AuthGuard } from './services/AuthGuard';
@@ -23,6 +23,8 @@ import { ModalAcaoComponent } from './shared/modal-acao/modal-acao.component';
 import { ModalRemoverComponent } from './shared/modal-remover/modal-remover.component';
 import { NgbModule, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { ErrorMsgComponent } from './compartilhado/error-msg/error-msg.component';
+import { ADMComponent } from './paginas/adm/adm.component';
+import { CardService } from './services/card.service';
 
 
 @NgModule({
@@ -41,16 +43,18 @@ import { ErrorMsgComponent } from './compartilhado/error-msg/error-msg.component
     ModalAcaoComponent,
     ModalRemoverComponent,
     ErrorMsgComponent,
+    ADMComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     BrowserAnimationsModule,
+    AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     NgbModule,
     HttpClientModule
   ],
-  providers: [AuthService, NotificationService, AuthGuard, NgbActiveModal],
+  providers: [AuthService, NotificationService, AuthGuard, NgbActiveModal, CardService],
   entryComponents: [
     ModalRemoverComponent,
     ModalAcaoComponent,
